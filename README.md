@@ -1,3 +1,3 @@
 # problem-practice
 
-I wanted a place to store solutions to problems that I work on in hacker rank and leetcode.
+I wanted a place to store solutions to problems that I work on in hacker rank, leetcode, etc.
