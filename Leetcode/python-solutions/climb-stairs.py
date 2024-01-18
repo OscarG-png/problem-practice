@@ -9,9 +9,12 @@ class Solution(object):
         if n == 2:
             return 2
 
-        dp = [0] * (n + 1)
-        dp[1], dp[2] = 1, 2
+        prev1, prev2 = 1, 2
 
         for i in range(3, n + 1):
-            dp[i] = dp[i - 1] + dp[i - 2]
-        return dp[n]
+            current = prev1 + prev2
+            prev1, prev2 = prev2, current
+        return prev2
+
+
+# improved runtime and memory usage from previous submission
