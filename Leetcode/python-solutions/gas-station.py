@@ -5,20 +5,18 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        total_gas = 0
-        total_cost = 0
+        total_gas = sum(gas)
+        total_cost = sum(cost)
         start_station = 0
         current_gas = 0
 
         for i in range(len(gas)):
-            total_gas += gas[i]
-            total_cost += cost[i]
             current_gas += gas[i] - cost[i]
-
             if current_gas < 0:
                 start_station = i + 1
                 current_gas = 0
-        if total_gas >= total_cost:
-            return start_station
-        else:
-            return -1
+
+        return start_station if total_gas >= total_cost else -1
+
+
+# this version has slightly better runtime, memory is about the same.
