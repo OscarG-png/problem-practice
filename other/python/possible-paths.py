@@ -5,11 +5,11 @@ def possible_paths(grid, robotLocation, maxSteps):
     rows = len(grid)
     cols = len(grid[0])
 
-    def validMove(row, col, steps):
+    def validMove(row, col):
         return 0 <= row < rows and 0 <= col < cols and grid[row][col] != "X"
 
     def dfs(row, col, steps):
-        if steps == 0:
+        if steps == 0 and grid[row][col] != "C":
             return 0
         if grid[row][col] == "C":
             return 1
@@ -38,7 +38,6 @@ class TestPossiblePaths(unittest.TestCase):
         robotLocation = [2, 2]
         maxSteps = 3
         result = possible_paths(grid, robotLocation, maxSteps)
-        # Replace 'expected_result' with the expected output of the function
         expected_result = 3
         self.assertEqual(result, expected_result)
 
