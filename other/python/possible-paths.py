@@ -9,10 +9,10 @@ def possible_paths(grid, robotLocation, maxSteps):
         return 0 <= row < rows and 0 <= col < cols and grid[row][col] != "X"
 
     def dfs(row, col, steps):
-        if steps == 0 and grid[row][col] != "C":
-            return 0
         if grid[row][col] == "C":
             return 1
+        if steps == 0:
+            return 0
         count = 0
         grid[row][col] = "X"
         for dr, dc in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
