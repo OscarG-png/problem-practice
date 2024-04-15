@@ -5,7 +5,8 @@ function update(arg) {
   return Math.random() + y * arg;
 }
 
-y = 3; // Adjusted value to ensure the result is between 6 and 7
+y = 3;
+4;
 
 const result = update(x);
 
