@@ -6,7 +6,7 @@ function update(arg) {
 }
 
 y = 3;
-4;
+y = 2;
 
 const result = update(x);
 
