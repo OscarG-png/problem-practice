@@ -16,4 +16,5 @@ function maxArea(height: number[]): number {
     }
     return maxWater;
   }
+  return 0;
 }
