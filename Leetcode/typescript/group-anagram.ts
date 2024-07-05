@@ -1,12 +1,12 @@
 function groupAnagrams(strs: string[]): string[][] {
-  let wordMap = new Map();
+  let wordMap: Map<string, string[]> = new Map();
 
-  for (let word of strs) {
-    let sortedWord = word.split("").sort().join("");
+  strs.forEach((str) => {
+    const sortedWord = str.split("").sort().join("");
     if (!wordMap.has(sortedWord)) {
       wordMap.set(sortedWord, []);
     }
-    wordMap.get(sortedWord).push(word);
-  }
-  return Array.from(wordMap.values()).sort();
+    wordMap.get(sortedWord)!.push(str);
+  });
+  return Array.from(wordMap.values());
 }
