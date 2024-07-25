@@ -12,7 +12,7 @@ function sortArray(nums: number[]): number[] {
     const rightMerge = mergeSort(arr.slice(mid));
     return merge(leftMerge, rightMerge);
   }
-  function merge(left, right) {
+  function merge(left: number[], right: number[]) {
     let sortedList: number[] = [];
     let leftIndex = 0;
     let rightIndex = 0;
