@@ -27,5 +27,5 @@ class Solution:
                         neiTimes.append(currTime)
             if (currTime // change) % 2 == 1:
                 currTime += change - (currTime % change)
-
-        return -1
+            currTime += time
+        return res
