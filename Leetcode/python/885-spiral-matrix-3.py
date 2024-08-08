@@ -2,7 +2,12 @@ from typing import List
 
 
 class Solution:
-    def spiralMatrixIII(self, rows: int, cols: int, rStart: int, cStart: int) -> List[List[int]]:
+    def spiralMatrixIII(
+            self,
+            rows: int,
+            cols: int,
+            rStart: int,
+            cStart: int) -> List[List[int]]:
         directions = [[0, 1], [1, 0], [0, -1], [-1, 0]]
 
         res = []
