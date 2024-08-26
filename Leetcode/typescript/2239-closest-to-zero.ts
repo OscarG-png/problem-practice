@@ -6,7 +6,7 @@ function findClosestNumber(nums: number[]): number {
       closest = num;
     }
   }
-  if (cloest < 0 && nums.includes(Math.abs(closest))) {
+  if (closest < 0 && nums.includes(Math.abs(closest))) {
     return Math.abs(closest);
   }
   return closest;
