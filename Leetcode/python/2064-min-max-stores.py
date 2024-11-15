@@ -14,7 +14,7 @@ class Solution:
         res = 0
 
         while l <= r:
-            x =  (l + r) // 2
+            x = (l + r) // 2
             if canDistribute(x):
                 res = x
                 r = x - 1
