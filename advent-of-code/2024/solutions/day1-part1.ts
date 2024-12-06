@@ -16,7 +16,9 @@ rightNumbers.sort((a, b) => a - b);
 let i = 0;
 let res = 0;
 
-for (let num of leftNumbers) {
+while (i < leftNumbers.length) {
+  res += Math.abs(leftNumbers[i] - rightNumbers[i]);
+  i++;
 }
 
 console.log(res);
